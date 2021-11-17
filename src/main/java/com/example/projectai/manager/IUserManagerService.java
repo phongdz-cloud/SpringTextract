@@ -8,7 +8,7 @@ public interface IUserManagerService {
 
   List<UserDTO> findAllUserDTO();
 
-  UserDTO save(UserDTO userDTO, RoleDTO roleDTO);
+  UserDTO save(UserDTO userDTO);
 
   Boolean existsByEmail(String email);
 

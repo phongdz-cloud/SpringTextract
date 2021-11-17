@@ -8,7 +8,7 @@ public interface IUserService {
 
   List<UserEntity> findAllUser();
 
-  UserEntity save(UserEntity userEntity, RoleEntity role);
+  UserEntity save(UserEntity userEntity);
 
   Boolean existsByEmail(String email);
 

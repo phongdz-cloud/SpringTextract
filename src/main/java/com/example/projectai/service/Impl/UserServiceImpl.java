@@ -22,8 +22,7 @@ public class UserServiceImpl implements IUserService {
   }
 
   @Override
-  public UserEntity save(UserEntity userEntity, RoleEntity role) {
-    userEntity.setRole(role);
+  public UserEntity save(UserEntity userEntity) {
     return userRepository.save(userEntity);
   }
 

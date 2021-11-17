@@ -32,10 +32,9 @@ public class UserManagerServiceImpl implements IUserManagerService {
   }
 
   @Override
-  public UserDTO save(UserDTO userDTO, RoleDTO roleDTO) {
+  public UserDTO save(UserDTO userDTO) {
     UserEntity userEntity = modelMapper.map(userDTO, UserEntity.class);
-    RoleEntity roleEntity = modelMapper.map(roleDTO, RoleEntity.class);
-    return modelMapper.map(userService.save(userEntity, roleEntity), UserDTO.class);
+    return modelMapper.map(userService.save(userEntity), UserDTO.class);
   }
 
   @Override
